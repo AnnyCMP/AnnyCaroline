@@ -1,0 +1,30 @@
+@charset "UTF-8";
+header{
+    background-color: #FFCD82;
+}
+h1{
+    color:#8B5630;
+    text-align: center;
+}
+div{
+    text-align: center;
+}
+@font-face{
+    font-family:OpenSans_Condensed-Light;
+    src: url('OpenSans_Condensed-Light.ttf') format('truetype');
+}
+.titulo-principal{
+    position:absolute;
+    top:16%;
+    left: 45%;
+    transform: translate(-10%, -50%);
+    font-size: 35px;
+    font-family: OpenSans_Condensed-Light;
+}
+main{
+    width: 940px;
+    margin: auto;
+}
+form{
+    margin: 40px 0;
+}
