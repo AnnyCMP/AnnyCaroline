@@ -1,10 +1,12 @@
 @charset "UTF-8";
 header{
     background-color: #FFCD82;
+    
 }
 h1{
     color:#8B5630;
     text-align: center;
+    padding-top: 70px;
 }
 div{
     text-align: center;
@@ -28,3 +30,60 @@ main{
 form{
     margin: 40px 0;
 }
+
+form label, form p{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: #FFCD82;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background:#8B5630;
+    transform: scale(1.2);
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 10px 0 0;
+}
+
+footer{
+    background-color: #2b2b2b;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+#logotipo1{
+border-radius: 10px;
+width: 160px;
+height: 140px;
+}
+
+
+
