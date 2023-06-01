@@ -17,11 +17,17 @@ div{
 }
 .titulo-principal{
     position:absolute;
-    top:16%;
+    top:13%;
     left: 45%;
     transform: translate(-10%, -50%);
-    font-size: 35px;
+    font-size: 40px;
     font-family: OpenSans_Condensed-Light;
+    color:#8B5630;
+    text-shadow:-1px -1px 0px #FFCD82,
+                -1px 3px 0px #000000;
+                1px -1px 0px #000000;
+                1px 0px 0px #000000;   
+             
 }
 main{
     width: 940px;
@@ -80,10 +86,51 @@ footer{
 }
 
 #logotipo1{
-border-radius: 10px;
+border-radius: 15px;
 width: 160px;
 height: 140px;
+border:2px solid aliceblue;
 }
+
+#logo{
+    height: 250px;
+   width: 250px;
+}
+
+nav{
+    position: absolute;
+    top:180px;
+    right: 50px;
+}
+
+nav li{
+    display:inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color:#000000;
+    font-size: 22px;
+    text-decoration: none;
+    font-family:OpenSans_Condensed-Light;
+}
+
+nav a:hover {
+color:#8B5630;
+text-decoration: underline;
+}
+
+main{
+    width: 940px;
+}
+
+
+
+
+
+
+
 
 
 
