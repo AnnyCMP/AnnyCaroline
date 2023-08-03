@@ -1,6 +1,6 @@
 @import url("styles/header.css");
 :root{
-    --cor-de-fundo:rgb(171, 231, 255);
+    --cor-de-fundo:rgb(190, 238, 255);
     --branco:white;
     --degrade:linear-gradient(rgb(214, 4, 214), rgb(33, 1, 33) ); 
 }
