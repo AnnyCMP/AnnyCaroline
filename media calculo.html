@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo da Média</title>
+</head>
+<body>
+    <h1>CALCULO DA MÉDIA</h1>
+    <script>
+       var nome = prompt("Qual é o seu nome?");
+     
+       var n1 = Number(prompt("Informe a nota do primeiro trimestre"));
+       var n2 = Number(prompt("Informe a nota do segundo trimestre"));
+       var n3 = Number(prompt("Informe a nota do terceiro trimestre"));
+       var media = (n1 + n2 + n3) / 3;
+
+       alert(nome + ", a sua média é: " + media);
+
+       if (media >= 60) {
+           alert(nome + ", você foi aprovado!");
+       } else {
+           alert(nome + ", você foi reprovado.");
+       }
+    </script>
+</body>
+</html>
