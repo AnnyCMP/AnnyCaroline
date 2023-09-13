@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo da Média</title>
+</head>
+<body>
+    <h1>CALCULO DA MÉDIA</h1>
+
+    <form id="mediaForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required><br><br>
+
+        <label for="nota1">Nota do primeiro trimestre:</label>
+        <input type="number" id="nota1" required><br><br>
+
+        <label for="nota2">Nota do segundo trimestre:</label>
+        <input type="number" id="nota2" required><br><br>
+
+        <label for="nota3">Nota do terceiro trimestre:</label>
+        <input type="number" id="nota3" required><br><br>
+
+        <button type="button" onclick="calcularMedia()">Calcular Média</button>
+    </form>
+
+    <script>
+        function calcularMedia() {
+            var nome = document.getElementById("nome").value;
+            var n1 = parseFloat(document.getElementById("nota1").value);
+            var n2 = parseFloat(document.getElementById("nota2").value);
+            var n3 = parseFloat(document.getElementById("nota3").value);
+            var media = (n1 + n2 + n3) / 3;
+
+            alert(nome + ", a sua média é: " + media.toFixed(2));
+
+            if (media >= 60) {
+                alert(nome + ", você foi aprovado!");
+            } else {
+                alert(nome + ", você foi reprovado.");
+            }
+        }
+    </script>
+</body>
+</html>
