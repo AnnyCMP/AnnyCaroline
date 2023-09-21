@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada do 2</title>
+</head>
+<body>
+    <h1>Tabuada do 2</h1>
+    <h2>Usando for:</h2>
+    <script>
+        for (let i = 0; i <= 10; i++) {
+            let resultado = 2 * i;
+            document.write(`2 * ${i} = ${resultado} <br>`);
+        }
+    </script>
+
+    <h2>Usando while:</h2>
+    <script>
+        let j = 0;
+        while (j <= 10) {
+            let resultado = 2 * j;
+            document.write(`2 * ${j} = ${resultado} <br>`);
+            j++;
+        }
+    </script>
+
+    <h2>Usando do while:</h2>
+    <script>
+        let k = 0;
+        do {
+            let resultado = 2 * k;
+            document.write(`2 * ${k} = ${resultado} <br>`);
+            k++;
+        } while (k <= 10);
+    </script>
+</body>
+</html>

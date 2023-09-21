@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Trimestrais</title>
+</head>
+<body>
+    <h1>Notas Trimestrais</h1>
+
+    <script>
+        var continuar = "sim";
+
+        while (continuar === "sim") {
+            const numeroDeAlunos = parseInt(prompt("Informe o número de alunos:"));
+            var aluno = 1;
+
+            while (aluno <= numeroDeAlunos) {
+                var nome = prompt(`Informe o nome do Aluno ${aluno}:`);
+                let somaNotas = 0;
+                var trimestre = 1;
+
+                while (trimestre <= 3) {
+                    const nota = parseFloat(prompt(`Informe a nota do Trimestre ${trimestre} para ${nome}:`));
+                    somaNotas += nota;
+                    trimestre++;
+                }
+
+                const media = somaNotas / 3;
+                document.write(`${nome} teve média ${media.toFixed(2)}, `);
+
+                if (media >= 7) {
+                    document.write(`${nome} foi APROVADO! `);
+                } else {
+                    document.write(`${nome} foi REPROVADO! `);
+                }
+
+                aluno++;
+            }
+
+            continuar = prompt("Deseja continuar calculando para mais alunos? (sim/não)").toLowerCase();
+        }
+    </script>
+</body>
+</html>
