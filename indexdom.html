@@ -2,7 +2,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Introdução ao DOM!</title>
+
+    <style>
+        body{
+            background-color: rgb(119, 179, 252);
+            color:aliceblue;
+            font:normal 18pt arial;
+        }
+
+        
+    </style>
 </head>
 <body>
   <h1>OLA DOM!!!</h1>
@@ -15,13 +25,31 @@
 
   <script>
     var p1 = window.document.getElementsByTagName("p")[1]
-    p1.style.color = "yellow"
+    p1.style.color = "Indigo"
     window.document.writeln("manipulando por tag = " +p1.innerText + "<br>")
     window.document.write("manipulando por tag = "+p1.innerHTML + "<br>")
     window.alert(p1.innerHTML)
     window.alert(p1.innerText)
+    
 
+    var d = window.document.getElementById("div1")
+    d.style.color = "Crimson"
+    window.document.write("manipulando pelo ID = "+d.innerText +"<br>")
+    window.document.write("manipulando pelo ID = "+d.innerHTML +"<br>")
+    d.style.background = "Plum"
 
+    var par = window.document.getElementsByClassName("par1")[0]
+    window.document.write("manipulando pelo CLASS = "+par.innerText +"<br>")
+    window.document.write("manipulando pelo CLASS = "+par.innerHTML +"<br>")
+
+    var nm = window.document.getElementsByName("par2")[0]
+    window.document.write("manipulando pelo nome = "+nm.innerText +"<br>")
+    window.document.write("manipulando pelo nome = "+nm.innerHTML +"<br>")
+
+    var qr = window.document.querySelector("p")
+    window.document.write("manipulando pelo query = "+qs.innerText +"<br>")
+    window.document.write("manipulando pelo query = "+qs.innerHTML)
+    qs.style.background= "plum"
 
   </script>
 </body>
