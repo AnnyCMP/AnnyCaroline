@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>atividade</title>
+
+</head>
+<body>
+    <h1>avaliação</h1>
+    <form>
+        <fieldset>
+            <p>informe sua idade: </p>
+            <input type="number" name="txtidade" id="txtidade">
+            <p>sexo: </p>
+            <input type="radio"  name="rsex" id="mas" checked>
+            <label for="mas">masculino</label>
+            <input type="radio" name="rsex" id="fem" checked>
+            <label for="fem">feminino</label>
+            <br><br>
+            <input type="button" value="verificar" onclick="verificar()">
+        </fieldset>
+    </form>
+
+    <script>
+        function verificar() {
+         const idade = document.getElementById('txtidade').value;
+         const masculino = document.getElementById('mas').checked;
+         const feminino = document.getElementById('fem').checked;
+         const res = document.getElementById('res');
+         const imagem = document.getElementById('imagem');
+         let imagem = '';
+         let mensagem = '';
+         let backgroundColor = '';
+         let imageSrc = '';
+
+         if (masculino){
+            if (idade < 18){
+                mensagem = 'Você é um menino e tem ${idade} anos.';
+                backgroundColor = 'lightblue';
+                imageSrc = 'menino.png';
+
+            } else if (idade >=18 && idade < 65){
+                mensagem = 'Você é um homem adulto e tem ${idade} anos.';
+                backgroundColor = 'royalblue';
+                imageSrc = 'homem.png';
+
+            } else {
+                mensagem = 'Você é um idoso e tem ${idade} anos.';
+                backgroundColor = 'darkblue';
+                imageSrc = 'idoso.png';
+            }
+         } else if (feminino) {
+            if (idade < 18){
+                mensagem = 'Você é uma menina e tem ${idade} anos.';
+                backgroundColor = 'lightpink';
+                imageSrc = 'menina.png';
+
+            } else if (idade >=18 && idade < 65){
+                mensagem = 'Você é uma mulher adulta e tem ${idade} anos.';
+                backgroundColor = 'hotpink';
+                imageSrc = 'mulher.png';
+
+            } else {
+                mensagem = 'Você é uma idosa e tem ${idade} anos.';
+                backgroundColor = 'darkpink';
+                imageSrc = 'idosa.png';
+            }
+
+         }
+            res.innerHTML = mensagem;
+            imagem.innerHTML = '<img src'
+    
+        }
+    </script>
+</body>
+</html>
