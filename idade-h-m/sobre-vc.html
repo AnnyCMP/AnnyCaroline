@@ -35,23 +35,31 @@
             let mensagem = '';
             let backgroundColor = '';
             let imageSrc = '';
-
+            
             if(masculino){
-                if (idade < 18){
+                if(idade <5){
+                    mensagem = `Você é um bebê e tem ${idade} anos`;
+                    backgroundColor = 'blue';
+                    imageSrc = 'bartbebe.png';
+                } else if (idade < 18){
                     mensagem = `Você é um menino e tem ${idade} anos`;
                     backgroundColor = 'lightblue';
-                    imageSrc = '';
+                    imageSrc = 'bart.png';
                 } else if(idade >=18 && idade <65){
                     mensagem = `Você é um homem adulto e tem ${idade} anos`;
                     backgroundColor = 'royalblue';
-                    imageSrc = '';
+                    imageSrc = 'homer.png';
               } else {
                 mensagem = `Você é um homem idoso e tem ${idade} anos`;
                 backgroundColor = 'darkblue';
-                imageSrc = '';
+                imageSrc = 'abraham.png';
               }
             } else if (feminino) {
-            if (idade < 18){
+                if(idade <5){
+                    mensagem = `Você é uma bebê e tem ${idade} anos`;
+                    backgroundColor = 'pink';
+                    imageSrc = 'lisabebe.png';
+             } else if (idade < 18){
                 mensagem = `Você é uma menina e tem ${idade} anos.`;
                 backgroundColor = 'lightpink';
                 imageSrc = 'lisa.png';
@@ -59,12 +67,12 @@
             } else if (idade >=18 && idade < 65){
                 mensagem = `Você é uma mulher adulta e tem ${idade} anos.`;
                 backgroundColor = 'hotpink';
-                imageSrc = '';
+                imageSrc = 'marge.png';
 
             } else {
                 mensagem = `Você é uma idosa e tem ${idade} anos.`;
                 backgroundColor = 'darkpink';
-                imageSrc = '';
+                imageSrc = 'velha.png';
             }
 
          }
