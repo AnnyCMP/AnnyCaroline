@@ -1,76 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <title>atividade</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+    <link rel="stylesheet" href="idade.css">
 </head>
 <body>
-    <h1>avaliação</h1>
-    <form>
-        <fieldset>
-            <p>informe sua idade: </p>
-            <input type="number" name="txtidade" id="txtidade">
-            <p>sexo: </p>
-            <input type="radio"  name="rsex" id="mas" checked>
-            <label for="mas">masculino</label>
-            <input type="radio" name="rsex" id="fem" checked>
-            <label for="fem">feminino</label>
-            <br><br>
-            <input type="button" value="verificar" onclick="verificar()">
-        </fieldset>
+   <h1>Avaliação</h1>
+   <section>
+   <form>
+    <fieldset>
+        <p>informe sua idade: </p>
+        <input type="number" name="txtidade" id="txtidade">
+        <p>Sexo: </p>
+        <input type="radio" name="rsex" id="mas" checked>
+        <label for="mas">masculino</label>
+        <input type="radio" name="rsex" id="fem" checked>
+        <label for="fem">feminino</label>
+        <br><br>
+        <input type="button" id="botao" value="verificar" onclick="verificar()">
+    </fieldset>
     </form>
-
+    <div id="res"> </div>
+    <div id="imagem"> </div>
+   </section>
     <script>
-        function verificar() {
-         const idade = document.getElementById('txtidade').value;
-         const masculino = document.getElementById('mas').checked;
-         const feminino = document.getElementById('fem').checked;
-         const res = document.getElementById('res');
-         const imagem = document.getElementById('imagem');
-         let imagem = '';
-         let mensagem = '';
-         let backgroundColor = '';
-         let imageSrc = '';
+        function verificar(){
+            const idade = document.getElementById('txtidade').value;
+            const masculino = document.getElementById('mas').checked;
+            const feminino = document.getElementById('fem').checked;
+            const res = document.getElementById('res');
+            const imagem = document.getElementById('imagem');
+            let mensagem = '';
+            let backgroundColor = '';
+            let imageSrc = '';
 
-         if (masculino){
-            if (idade < 18){
-                mensagem = 'Você é um menino e tem ${idade} anos.';
-                backgroundColor = 'lightblue';
-                imageSrc = 'menino.png';
-
-            } else if (idade >=18 && idade < 65){
-                mensagem = 'Você é um homem adulto e tem ${idade} anos.';
-                backgroundColor = 'royalblue';
-                imageSrc = 'homem.png';
-
-            } else {
-                mensagem = 'Você é um idoso e tem ${idade} anos.';
+            if(masculino){
+                if (idade < 18){
+                    mensagem = `Você é um menino e tem ${idade} anos`;
+                    backgroundColor = 'lightblue';
+                    imageSrc = 'Cebolinha.png';
+                } else if(idade >=18 && idade <65){
+                    mensagem = `Você é um homem adulto e tem ${idade} anos`;
+                    backgroundColor = 'royalblue';
+                    imageSrc = 'cebolinhajovem.jpeg';
+              } else {
+                mensagem = `Você é um homem idoso e tem ${idade} anos`;
                 backgroundColor = 'darkblue';
-                imageSrc = 'idoso.png';
-            }
-         } else if (feminino) {
+                imageSrc = 'cebolinhaidoso.jpeg';
+              }
+            } else if (feminino) {
             if (idade < 18){
-                mensagem = 'Você é uma menina e tem ${idade} anos.';
+                mensagem = `Você é uma menina e tem ${idade} anos.`;
                 backgroundColor = 'lightpink';
-                imageSrc = 'menina.png';
+                imageSrc = 'monica.png';
 
             } else if (idade >=18 && idade < 65){
-                mensagem = 'Você é uma mulher adulta e tem ${idade} anos.';
+                mensagem = `Você é uma mulher adulta e tem ${idade} anos.`;
                 backgroundColor = 'hotpink';
-                imageSrc = 'mulher.png';
+                imageSrc = 'monicajovem.jpeg';
 
             } else {
-                mensagem = 'Você é uma idosa e tem ${idade} anos.';
+                mensagem = `Você é uma idosa e tem ${idade} anos.`;
                 backgroundColor = 'darkpink';
-                imageSrc = 'idosa.png';
+                imageSrc = 'monicaIdosa.jpg';
             }
 
          }
             res.innerHTML = mensagem;
-            imagem.innerHTML = '<img src'
+            imagem.innerHTML = `<img src="${imageSrc}" alt="${mensagem}">`;
     
         }
+
+        
+        
     </script>
+    
 </body>
 </html>
