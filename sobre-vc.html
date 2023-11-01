@@ -40,36 +40,36 @@
                 if (idade < 18){
                     mensagem = `Você é um menino e tem ${idade} anos`;
                     backgroundColor = 'lightblue';
-                    imageSrc = 'Cebolinha.png';
+                    imageSrc = '';
                 } else if(idade >=18 && idade <65){
                     mensagem = `Você é um homem adulto e tem ${idade} anos`;
                     backgroundColor = 'royalblue';
-                    imageSrc = 'cebolinhajovem.jpeg';
+                    imageSrc = '';
               } else {
                 mensagem = `Você é um homem idoso e tem ${idade} anos`;
                 backgroundColor = 'darkblue';
-                imageSrc = 'cebolinhaidoso.jpeg';
+                imageSrc = '';
               }
             } else if (feminino) {
             if (idade < 18){
                 mensagem = `Você é uma menina e tem ${idade} anos.`;
                 backgroundColor = 'lightpink';
-                imageSrc = 'monica.png';
+                imageSrc = 'lisa.png';
 
             } else if (idade >=18 && idade < 65){
                 mensagem = `Você é uma mulher adulta e tem ${idade} anos.`;
                 backgroundColor = 'hotpink';
-                imageSrc = 'monicajovem.jpeg';
+                imageSrc = '';
 
             } else {
                 mensagem = `Você é uma idosa e tem ${idade} anos.`;
                 backgroundColor = 'darkpink';
-                imageSrc = 'monicaIdosa.jpg';
+                imageSrc = '';
             }
 
          }
             res.innerHTML = mensagem;
-            imagem.innerHTML = `<img src="${imageSrc}" alt="${mensagem}">`;
+            imagem.innerHTML = `<img src="${imageSrc}" >`;
     
         }
 
@@ -79,46 +79,3 @@
     
 </body>
 </html>
-
-
-body{
-    background-color:darkgrey;
-}
-h1{
-    text-align: center;
-    color: aquamarine;
-    font-size: 40px;
-}
-form{
-    padding: 25px;
-    margin: 70px;
-    
-    
-    align-items: center;
-}
-p{
-    text-align: center;
-    color: rgb(79, 17, 17);
-}
-#txtidade{
-    margin-left: 37%;
-}
-#mas{
-    margin-left: 36%;
-}
-#botao{
-    background-color: aqua;
-    border-radius: 5px;
-    font-size: 15px;
-    margin-left: 45%;
-}
-section{
-    align-items: center;
-    background-color: blueviolet;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-img{
-    margin-left: 38%;
-    width: 400px;
-}
