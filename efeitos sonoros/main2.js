@@ -2,14 +2,14 @@ let lista = document.querySelectorAll(".tecla");
 
 let contador = 0;
 
-fuction tocaSom(idElementoAudio){
-    document.querySelector(idElementoAudio)Play
+function tocaSom(idElementoAudio) {
+    document.querySelector(idElementoAudio).play()
 }
 
-while (contador < lista.length){
-    const efeito = lista[contador].classlist[1];
-    const idAudio = "som"+efeito;
-    listaDeTeclas[contador].onclick = function(){
+while (contador < lista.length) {
+    const efeito = lista[contador].classList[1];
+    const idAudio = "#som_" + efeito;
+    lista[contador].onclick = function () {
         tocaSom(idAudio);
     }
     contador++;
