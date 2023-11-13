@@ -3,9 +3,19 @@ let lista = document.querySelectorAll(".tecla");
 let contador = 0;
 
 function tocaSom(idElementoAudio) {
+    contador = 0
+    while (contador < lista.length) {
+        const efeito = lista[contador].classList[1];
+        const idAudio = "#som_" + efeito;
+        let audio = document.querySelector(idAudio)
+        audio.pause()
+        audio.currentTime = 0
+        contador++;
+    }
     document.querySelector(idElementoAudio).play()
 }
 
+contador = 0
 while (contador < lista.length) {
     const efeito = lista[contador].classList[1];
     const idAudio = "#som_" + efeito;
